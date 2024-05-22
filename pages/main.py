@@ -7,6 +7,7 @@ import SimpleITK as sitk
 import pandas as pd
 import numpy as np
 import pickle
+import joblib
 import keras
 from scipy.ndimage import binary_fill_holes
 
@@ -183,8 +184,8 @@ if st.session_state.get('show_res'):
         norm_feat = (feat.iloc[0] - feat.loc['mean']) / feat.loc['std']
 
         # Load the classification model
-        with open('pages/svm_all.pkl', 'rb') as f:
-            svm_classifier = pickle.load(f)
+        with open('pages/svm_final.joblib', 'rb') as f:
+            svm_classifier = joblib.load(f)
 
         # Compute vector of probabilities for prediction
         probs = svm_classifier.predict_proba(np.array(norm_feat).reshape(1, -1))[0]
