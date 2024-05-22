@@ -31,7 +31,7 @@ st.markdown(
     unsafe_allow_html=True)
 
 # Load CSS file
-with open("../style.css") as css:
+with open("style.css") as css:
     st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
 is_uploaded = False  # variable to control if the file has been uploaded
