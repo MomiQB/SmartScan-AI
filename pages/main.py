@@ -47,6 +47,7 @@ with st.container():
 
         # Logout button
         if st.button("Logout"):
+            st.session_state.disabled = False
             st.session_state.authentication_status = None
             st.switch_page("login.py")
 
