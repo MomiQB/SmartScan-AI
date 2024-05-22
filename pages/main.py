@@ -8,7 +8,6 @@ import pandas as pd
 import numpy as np
 import pickle
 import keras
-import cv2
 from scipy.ndimage import binary_fill_holes
 
 from functions import featurexImg, load_image
@@ -32,7 +31,7 @@ st.markdown(
     unsafe_allow_html=True)
 
 # Load CSS file
-with open("C:/Users/momiv/OneDrive/Desktop/magistrale/1st_year/SIAM in Healthcare/project2/style.css") as css:
+with open("../style.css") as css:
     st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
 is_uploaded = False  # variable to control if the file has been uploaded
@@ -172,7 +171,7 @@ if st.session_state.get('show_res'):
         feat = feat.drop(["original_glcm_SumAverage"], axis=1)
 
         # Load normalization info
-        norm_df = pd.read_csv("C:/Users/momiv/OneDrive/Desktop/magistrale/1st_year/SIAM in Healthcare/project2/pages/normalization_all.csv")
+        norm_df = pd.read_csv("./normalization_all.csv")
         mean = norm_df["mean"]
         std = norm_df["std"]
         mean.index = feat.columns.tolist()
@@ -183,7 +182,7 @@ if st.session_state.get('show_res'):
         norm_feat = (feat.iloc[0] - feat.loc['mean']) / feat.loc['std']
 
         # Load the classification model
-        with open('C:/Users/momiv/OneDrive/Desktop/magistrale/1st_year/SIAM in Healthcare/project2/pages/svm_all.pkl', 'rb') as f:
+        with open('./svm_all.pkl', 'rb') as f:
             svm_classifier = pickle.load(f)
 
         # Compute vector of probabilities for prediction
