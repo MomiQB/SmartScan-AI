@@ -10,12 +10,12 @@ st.set_page_config(initial_sidebar_state="collapsed")
 with open("./style.css" ) as css:
     st.markdown(f'<style>{css.read()}</style>', unsafe_allow_html=True)
 
-st.title('SmartScan AI')
+# st.title('SmartScan AI')
 # st.image('C:/Users/momiv/OneDrive/Desktop/magistrale/1st_year/SIAM in Healthcare/project2/pages/logo_smartscan_nobg.png')
 
-# st.markdown(
-#    """<img src="C:/Users/momiv/OneDrive/Desktop/magistrale/1st_year/SIAM in Healthcare/project2/pages/logo_smartscan_nobg.png" style="scale: 0.7;" alt="">""",
-#    unsafe_allow_html=True)
+st.markdown(
+    """<img src="./pages/logo_smartscan_nobg.png" style="scale: 0.7;" alt="">""",
+   unsafe_allow_html=True)
 
 with open('./credentials.yaml') as file:
     config = yaml.load(file, Loader=SafeLoader)
