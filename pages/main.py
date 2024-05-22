@@ -171,7 +171,7 @@ if st.session_state.get('show_res'):
         feat = feat.drop(["original_glcm_SumAverage"], axis=1)
 
         # Load normalization info
-        norm_df = pd.read_csv("normalization_all.csv")
+        norm_df = pd.read_csv("pages/normalization_all.csv")
         mean = norm_df["mean"]
         std = norm_df["std"]
         mean.index = feat.columns.tolist()
@@ -182,7 +182,7 @@ if st.session_state.get('show_res'):
         norm_feat = (feat.iloc[0] - feat.loc['mean']) / feat.loc['std']
 
         # Load the classification model
-        with open('svm_all.pkl', 'rb') as f:
+        with open('pages/svm_all.pkl', 'rb') as f:
             svm_classifier = pickle.load(f)
 
         # Compute vector of probabilities for prediction
