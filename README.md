@@ -9,5 +9,10 @@ Our primary **goal** is to provide oncologists with an exceptionally precise too
 > Breast cancer can begin in different parts of the breast, such as the ducts or the lobules. It can spread to other parts of the body through the lymphatic system or bloodstream.  \
 > Early detection through screening and awareness campaigns is crucial for successful treatment.
 
+Starting from a dataset of Breast Ultrasounds and their masks, we create a robust **classifier** that is able to distinguish between benign and malignant regions. Subsequently, we design and train a U-Net that is able to automatically detect the regions of interest. Finally, we design a dashboard using an intuitive interface for diagnostics.  
+
+### _Content_:
+- [Health_Class.ipynb]
+
 
 
