@@ -28,6 +28,8 @@ _streamlit-dashboard_ directory:
 - [pages/svm_final.joblib](https://github.com/MomiQB/SmartScan-AI/blob/main/streamlit-dashboard/pages/svm_final.joblib): best trained classifier
 - [pages/segmUnet100_aug.keras](https://github.com/MomiQB/SmartScan-AI/blob/main/streamlit-dashboard/pages/segmUnet100_aug.keras): best trained U-Net model
 - [pages/logo_smartscan_nobg.png](https://github.com/MomiQB/SmartScan-AI/blob/main/streamlit-dashboard/pages/logo_smartscan_nobg.png): logo image
+- [pages/images/benign1.png](https://github.com/MomiQB/SmartScan-AI/blob/main/streamlit-dashboard/pages/images/benign1.png), [pages/images/benign2.png](https://github.com/MomiQB/SmartScan-AI/blob/main/streamlit-dashboard/pages/images/benign2.png): examples of benign masses
+- [pages/images/malignant1.png](https://github.com/MomiQB/SmartScan-AI/blob/main/streamlit-dashboard/pages/images/malignant1.png), [pages/images/malignant2.png](https://github.com/MomiQB/SmartScan-AI/blob/main/streamlit-dashboard/pages/images/malignant2.png): examples of malignant masses
 
 
 
