@@ -72,7 +72,7 @@ with st.container():
 
             # Selectbox
             drawing_mode = st.selectbox(
-                "Drawing mode:", ("freedraw", "polygon", "automatic"),  # "line", "rect", "circle", "point", "transform"
+                "Drawing mode:", ("freedraw", "polygon", "automatic"),
                 help="- freedraw: manually draw the region\n- polygon: click to add vertices, right click to close the polygon\n- automatic: select region automatically"
             )
 
@@ -111,7 +111,7 @@ if is_uploaded:
                 if 'mask' not in st.session_state:
                     # Load the segmentation model and perform automatic segmentation
                     unet = keras.models.load_model(
-                        'C:/Users/momiv/OneDrive/Desktop/magistrale/1st_year/SIAM in Healthcare/project2/pages/segmUnet100_aug.keras')
+                        'pages/segmUnet100_aug.keras')
                     size_down = 128
                     threshold = 1e-1
                     segm = load_image(np.array(img), size_down)
